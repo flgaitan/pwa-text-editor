@@ -23,6 +23,7 @@ export default class {
     });
 
     // When the editor is ready, set the value to whatever is stored in indexeddb.
+    //getDb gets stored in (data), this method function is writting our databse
     // Fall back to localStorage if nothing is stored in indexeddb, and if neither is available, set the value to header.
     getDb().then((data) => {
       console.info('Loaded data from IndexedDB, injecting into editor');
@@ -40,3 +41,5 @@ export default class {
     });
   }
 }
+
+
